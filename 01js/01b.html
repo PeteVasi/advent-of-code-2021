@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="01b.js"></script>
+    </head>
+    <body>
+        <form>
+            <textarea id="input" style="width: 300px; height: 300px;">1
+2
+3</textarea>
+            <br>
+            <input type="button" onclick="buttonClick();" value="Click me!"/>
+            <input id="output" type="text" />
+        </form>
+
+        <script lang="javascript">
+            function buttonClick() {
+                var lines = document.getElementById("input").value.split("\n")
+                for(var i = 0; i < lines.length; i++) {
+                    lines[i] = lines[i].trim()
+                }
+                document.getElementById("output").value = getAnswer(lines)
+            }
+        </script>
+    </body>
+</html>
